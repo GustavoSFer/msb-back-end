@@ -8,7 +8,9 @@ const getAll = async () => {
 };
 
 const createForm = async (name, email, phone, message, file) => {
-  const createData = await model.createForm(name, email, phone, message, file);
+  let mensagem = message;
+  if (!message) mensagem = 'Sem mensagem!';
+  const createData = await model.createForm(name, email, phone, mensagem, file);
   return createData;
 };
 

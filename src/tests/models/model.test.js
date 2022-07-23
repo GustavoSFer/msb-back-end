@@ -18,18 +18,12 @@ describe('Models', () => {
       expect(data).to.be.empty;
     });
   });
-
   describe('#Create', () => {
     it('Cadastrando no Banco de dados', async () => {
       sinon.stub(User, 'create').resolves(dataDb[0]);
       const data = await model.createForm(bodycreate);
       expect(data).to.be.equal(dataDb[0]);
     });
-    // it('Quando não tiver dados, deve retornar um array vazio', async () => {
-    //   sinon.stub(User, 'findAll').resolves([]);
-    //   const data = await model.getAll();
-    //   expect(data).to.be.empty;
-    // });
   });
 
 });

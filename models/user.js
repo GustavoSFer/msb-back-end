@@ -5,6 +5,11 @@ const User = (sequelize, DataTypes) => {
     phone: DataTypes.STRING,
     message: DataTypes.STRING,
     file: DataTypes.STRING,
+  }, {
+    sequelize,
+    tableName: 'users',
+    timestamps: false,
+    underscored: true,
   });
 
   return User;

@@ -3,6 +3,7 @@ const multer = require('multer');
 const cors = require('cors');
 const route = require('./router');
 const error = require('./middleware/middlewareError');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;

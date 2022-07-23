@@ -1,10 +1,10 @@
 const { Router } = require('express');
 const controller = require('../controller');
-const validacoes = require('../middleware/validacoes');
+// const validacoes = require('../middleware/validacoes');
 
 const route = Router();
 
 route.get('/', controller.getAll);
-route.put('/', validacoes.validationCreate, controller.createForm);
+route.post('/', controller.createForm);
 
 module.exports = route;

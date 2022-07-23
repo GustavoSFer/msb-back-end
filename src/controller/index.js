@@ -9,11 +9,14 @@ const getAll = async (req, res) => {
 
 const createForm = async (req, res) => {
   const {
-    name, email, phone, message, file,
+    name, email, phone, mensagem, nomeFile, myip,
   } = req.body;
-  console.log(name, email, phone, message, file);
+  // const { file } = req.file;
+  console.log(req.body);
+  console.log('>>>>>>>>>>>>>>', name, email, phone, mensagem, nomeFile, myip);
+  console.log('===============');
 
-  const createData = await service.createForm(name, email, phone, message, file);
+  const createData = await service.createForm(name, email, phone, mensagem, nomeFile, myip);
   res.status(201).json((createData));
 };
 

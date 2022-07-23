@@ -27,6 +27,14 @@ module.exports = {
       file: {
         allowNull: false,
         type: Sequelize.STRING
+      },
+      myip: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      data: {
+        allowNull: false,
+        type: Sequelize.DATE
       }
     });
   },

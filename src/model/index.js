@@ -8,9 +8,10 @@ const getAll = async () => {
   return data;
 };
 
-const createForm = async (name, email, phone, message, file) => {
+const createForm = async (name, email, phone, message, file, myip) => {
+  const data = new Date();
   const createData = await User.create({
-    name, email, phone, message, file,
+    name, email, phone, message, file, myip, data,
   });
 
   return createData;

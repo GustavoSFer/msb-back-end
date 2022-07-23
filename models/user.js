@@ -5,6 +5,8 @@ const User = (sequelize, DataTypes) => {
     phone: DataTypes.STRING,
     message: DataTypes.STRING,
     file: DataTypes.STRING,
+    myip: DataTypes.STRING,
+    data: DataTypes.DATE,
   }, {
     sequelize,
     tableName: 'users',

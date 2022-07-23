@@ -20,6 +20,10 @@ const schema = Joi.object({
     'string.base': 'file precisa ser uma string',
     'any.required': 'file obrigatório',
   }),
+  myIp: Joi.string().required().messages({
+    'string.base': 'file precisa ser uma string',
+    'any.required': 'file obrigatório',
+  }),
 });
 
 module.exports = schema;
